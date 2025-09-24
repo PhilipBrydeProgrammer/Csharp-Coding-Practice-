@@ -1,4 +1,4 @@
-# C-Coding-Practice-
+# CSHARP-Coding-Practice-
 Studying @Daniaerhversakadami Silkeborg as a datamatiker (Programmer) 
 
 List of practices includes:
