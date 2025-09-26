@@ -416,3 +416,22 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Rider / IntelliJ project files
+.idea/
+*.sln.iml
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+out/
+
+# Rider caches
+*.iml
+.gradle/
