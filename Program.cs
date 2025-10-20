@@ -119,15 +119,5 @@ namespace cody_practice_v2
             Console.WriteLine(n3);
 
         }
-
-        {
-            //TEST TEST DOES THIS WORK AS DIRECT
-            //COMIT TO GITHUB THROUGH GITHUB DESKTOP????
-            //CHANGEEEE
-            
-            
-            
-            
-        }
     }
 }
