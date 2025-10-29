@@ -18,8 +18,9 @@ namespace cody_practice_v2
                 Console.WriteLine("2. Math Exercise");
                 Console.WriteLine("3. New Exercise");
                 Console.WriteLine("4. Increment / Decrement Exercise");
-                Console.WriteLine("0. quit");
-                Console.Write("chose an option: ");
+                Console.WriteLine("5. Array + Simple Exercise");
+                Console.WriteLine("0. Quit");
+                Console.Write("Choose an option: ");
 
                 string choice = Console.ReadLine();
                 Console.Clear();
@@ -27,16 +28,19 @@ namespace cody_practice_v2
                 switch (choice)
                 {
                     case "1":
-                        KayakExercise.Run(); // 👈 You’ll add this class next
+                        KayakExercise.Run();
                         break;
                     case "2":
-                        MathExercises.Run(); // 👈 Calls your MathExercises class
+                        MathExercises.Run();
                         break;
                     case "3":
                         NewExercise();
                         break;
                     case "4":
-                        IncrementDecrement.Run(); // 👈 Calls IncrementDecrement class
+                        IncrementDecrement.Run();
+                        break;
+                    case "5":
+                        ArrayExercise.Run(); // 👈 Moved the other Program code here
                         break;
                     case "0":
                         running = false;
@@ -52,7 +56,6 @@ namespace cody_practice_v2
             }
         }
 
-        // === Midlertidig NewExercise (kan også flyttes ud senere) ===
         static void NewExercise()
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -66,6 +69,38 @@ namespace cody_practice_v2
             int b = 100;
             b -= 10;
             Console.WriteLine(b);
+        }
+    }
+
+    // 👇 Moved the “array + Simple” logic into its own class
+    class ArrayExercise
+    {
+        public static void Run()
+        {
+            int[] arr = new int[] { 4, 6, 2, 33, 5 };
+            int svar = A(arr);
+            Console.WriteLine(svar);
+
+            Simple person = new Simple();
+            person.ShowInfo();
+        }
+
+        static int A(int[] arr)
+        {
+            int pos = arr.Length - 1;
+            return arr[pos];
+        }
+    }
+
+    class Simple
+    {
+        int age = 23;
+        string name = "Philip Bryde";
+        string occupation = "*Athlete*";
+
+        public void ShowInfo()
+        {
+            Console.WriteLine($"{name} {age} {occupation}");
         }
     }
 }
